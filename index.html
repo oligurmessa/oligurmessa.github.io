@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oli Gurmessa</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f7f5f0;
+      --ink: #1a1814;
+      --muted: #8a8070;
+      --accent: #c84b2f;
+      --rule: #d8d2c8;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      min-height: 100vh;
+      padding: 0 1.5rem;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 5rem 0 4rem;
+    }
+
+    /* ── Header ── */
+    header { margin-bottom: 3.5rem; }
+
+    .name {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+
+    .tagline {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--rule);
+      margin: 2.5rem 0;
+    }
+
+    /* ── Nav links ── */
+    .links {
+      display: flex;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+      margin-top: 1.4rem;
+    }
+
+    .links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .links a:hover { color: var(--ink); border-color: var(--ink); }
+
+    /* ── Sections ── */
+    section { margin-bottom: 3rem; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #3a3530;
+    }
+
+    /* ── Research & Work items ── */
+    .items { display: flex; flex-direction: column; gap: 1.6rem; }
+
+    .item-title {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .item-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.45rem;
+    }
+
+    .item-desc {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #3a3530;
+    }
+
+    .item-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      margin-left: 0.5rem;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+    .item-link:hover { opacity: 1; }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 2rem;
+    }
+
+    .skill-group-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .skill-list {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #3a3530;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding-top: 2rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 480px) {
+      .skills-grid { grid-template-columns: 1fr; }
+      .container { padding: 3.5rem 0 3rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="name">Oli Gurmessa</div>
+    <div class="tagline">CS + ML · University of St. Thomas · St. Paul, MN</div>
+    <div class="links">
+      <a href="mailto:gurm1658@stthomas.edu">Email</a>
+      <a href="https://linkedin.com/in/oligurmessa" target="_blank">LinkedIn</a>
+      <a href="https://github.com/oligurmessa" target="_blank">GitHub</a>
+      <a href="tel:6123696098">(612) 369-6098</a>
+    </div>
+  </header>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">About</div>
+    <p>
+      CS student on the fast-track M.S. path at UST, focused on machine learning research
+      and building thoughtful software. My work spans diffusion model evaluation, generative
+      audio for games, and character recognition for historical scripts.
+    </p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">Research</div>
+    <div class="items">
+
+      <div>
+        <div class="item-title">Diffusion Model Probing</div>
+        <div class="item-meta">UST Computer Science · 2025 – Present</div>
+        <div class="item-desc">
+          Building an evaluation harness to study quality vs. inference-step tradeoffs
+          in diffusion models. Running 1,600 prompts across 27 step configurations,
+          targeting 5–10% compute reduction while preserving PickScore 0.90–0.95.
+        </div>
+      </div>
+
+      <div>
+        <div class="item-title">AI Audio for User-Generated Content in Video Games</div>
+        <div class="item-meta">UST Computer Science · 2024
+          <a class="item-link" href="https://arxiv.org/abs/2404.17018" target="_blank">arXiv →</a>
+        </div>
+        <div class="item-desc">
+          Developed text-to-audio and image-to-audio pipelines for dynamic game audio
+          using MusicGen/AudioGen. Converted 50+ levels into prompts; optimized pipeline
+          to 4 s per clip.
+        </div>
+      </div>
+
+      <div>
+        <div class="item-title">GeezNet: Deep Architectures for Ge'ez Numeral Recognition</div>
+        <div class="item-meta">UROP · 2023
+          <a class="item-link" href="https://doi.org/10.1109/TVCG.2024.3456345" target="_blank">IEEE →</a>
+        </div>
+        <div class="item-desc">
+          Implemented CNN, ResNet50, and InceptionV3 baselines for Ge'ez numeral
+          classification. Achieved 97.8% accuracy and 98% F1 on a 10,000-image dataset.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">Projects</div>
+    <div class="items">
+
+      <div>
+        <div class="item-title">SoulSpect</div>
+        <div class="item-meta">Privacy-first personal intelligence app</div>
+        <div class="item-desc">
+          Next.js app using open-weight MaaS APIs. Multimodal moment entry with
+          vector embeddings, ChromaDB, and RAG for semantic search across text, audio, and images.
+          Architected for on-device inference.
+        </div>
+      </div>
+
+      <div>
+        <div class="item-title">HallPals</div>
+        <div class="item-meta">Residence life operations platform</div>
+        <div class="item-desc">
+          AI-assisted RA duty platform with role-based access and incident guidance.
+          Piloted with 10 RAs; observed a ~30-minute efficiency gain per shift through
+          iterative user feedback.
+        </div>
+      </div>
+
+      <div>
+        <div class="item-title">Drowsiness Detection (NumPy Neural Net)</div>
+        <div class="item-meta">Course project</div>
+        <div class="item-desc">
+          Neural network built from scratch in NumPy — forward/backward pass, ReLU/Softmax,
+          gradient descent. Achieved 92% accuracy on eye-state classification.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <div class="section-label">Skills</div>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-group-label">Languages</div>
+        <div class="skill-list">Python, Java, C++, TypeScript, LaTeX</div>
+      </div>
+      <div>
+        <div class="skill-group-label">ML / DS</div>
+        <div class="skill-list">PyTorch, TensorFlow, scikit-learn, NumPy, pandas, OpenCV</div>
+      </div>
+      <div>
+        <div class="skill-group-label">Tools</div>
+        <div class="skill-list">Linux, Git, SQL, Docker, GCP, Power BI</div>
+      </div>
+      <div>
+        <div class="skill-group-label">Education</div>
+        <div class="skill-list">B.S. CS · Fast-Track M.S. · University of St. Thomas</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <footer>© 2025 Oli Gurmessa</footer>
+
+</div>
+</body>
+</html>
