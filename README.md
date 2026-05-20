@@ -1,4 +1,6 @@
-Engineering Empathy: AI, Ethics, and the Common Good
+Engineering Empathy
+
+AI, Ethics, and the Common Good
 Technology doesn't come out of nowhere. It carries the values, blind spots, and priorities of whoever built it. We're now scaling up Artificial Intelligence faster than we ever have, and that raises a hard question: how do we make sure our most powerful tools actually respect people? This is the problem that has shaped my time in school. Between my classes and my own experiences, I've started to believe the biggest issue in computer science today isn't building smarter models. It's making sure those models protect human agency and privacy. That takes more than clean math. It takes a real commitment to the common good, which happens to be one of the core ideas behind the University of St. Thomas.
 
 I can't get there with one field alone. The way I think about this comes from looking at technology through two lenses at once: Computer Science and History. Computer Science gives me the machinery. The architecture, the math, the systems you need to build something that scales. History and Philosophy give me the rest. They tell me why we build things, who gets affected, and what goes wrong when we flatten messy human lives into clean data points.
