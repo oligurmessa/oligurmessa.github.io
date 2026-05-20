@@ -102,13 +102,14 @@
       font-size: 1.05rem;
       line-height: 1.75;
       color: #3a3530;
+      margin-bottom: 1rem;
     }
 
     /* ── Research & Work items ── */
-    .items { display: flex; flex-direction: column; gap: 1.6rem; }
+    .items { display: flex; flex-direction: column; gap: 2.5rem; }
 
     .item-title {
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 500;
       margin-bottom: 0.2rem;
     }
@@ -119,13 +120,42 @@
       font-weight: 300;
       color: var(--muted);
       letter-spacing: 0.04em;
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .item-figure {
+      width: 100%;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 0.8rem;
+      border: 1px solid var(--rule);
     }
 
     .item-desc {
       font-size: 0.95rem;
       line-height: 1.65;
       color: #3a3530;
+    }
+
+    .item-keywords {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 400;
+      color: var(--accent);
+      margin-top: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* SOAR & Failure Lists */
+    .story-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.5rem;
+    }
+    .story-list li {
+      margin-bottom: 0.4rem;
     }
 
     .item-link {
@@ -188,34 +218,38 @@
       <a href="https://linkedin.com/in/oligurmessa" target="_blank">LinkedIn</a>
       <a href="https://github.com/oligurmessa" target="_blank">GitHub</a>
       <a href="tel:6123696098">(612) 369-6098</a>
+      <a href="[LINK_TO_YOUR_RESUME.pdf]" target="_blank">Resume</a>
     </div>
   </header>
 
   <div class="divider"></div>
 
   <section>
-    <div class="section-label">About</div>
+    <div class="section-label">About Me</div>
     <p>
       CS student on the fast-track M.S. path at UST, focused on machine learning research
       and building thoughtful software. My work spans diffusion model evaluation, generative
       audio for games, and character recognition for historical scripts.
+    </p>
+    <p>
+      <strong>Why should you hire me?</strong> I bring a unique combination of rigorous technical expertise in machine learning and scalable backend architecture, paired with strong communication and ethical reasoning developed through my studies in [INSERT LIBERAL ARTS SUBJECT, e.g., Philosophy/Theology]. This dual perspective allows me to not only build complex, high-performing systems but also ensure they are human-centered, thoughtfully documented, and effectively communicated to all stakeholders.
     </p>
   </section>
 
   <div class="divider"></div>
 
   <section>
-    <div class="section-label">Research</div>
+    <div class="section-label">Projects and Experiences</div>
     <div class="items">
 
       <div>
-        <div class="item-title">Diffusion Model Probing</div>
-        <div class="item-meta">UST Computer Science · 2025 – Present</div>
+        <div class="item-title">CISC480 Senior Capstone: [Insert Project Name]</div>
+        <div class="item-meta">UST Computer Science · Spring 2026</div>
+        <img class="item-figure" src="[PATH_TO_IMAGE.jpg]" alt="Capstone Architecture Diagram or Screenshot">
         <div class="item-desc">
-          Building an evaluation harness to study quality vs. inference-step tradeoffs
-          in diffusion models. Running 1,600 prompts across 27 step configurations,
-          targeting 5–10% compute reduction while preserving PickScore 0.90–0.95.
+          [Insert short description of your capstone project. Be sure to use the keywords below naturally in the description, e.g., "For my capstone, I developed a full-stack application using Node.js..."]
         </div>
+        <div class="item-keywords">Keywords: Capstone, [Keyword 1], [Keyword 2]</div>
       </div>
 
       <div>
@@ -223,11 +257,66 @@
         <div class="item-meta">UST Computer Science · 2024
           <a class="item-link" href="https://arxiv.org/abs/2404.17018" target="_blank">arXiv →</a>
         </div>
+        <img class="item-figure" src="[PATH_TO_IMAGE.jpg]" alt="Diagram of text-to-audio pipeline">
         <div class="item-desc">
-          Developed text-to-audio and image-to-audio pipelines for dynamic game audio
-          using MusicGen/AudioGen. Converted 50+ levels into prompts; optimized pipeline
-          to 4 s per clip.
+          <ul class="story-list">
+            <li><strong>Situation:</strong> Dynamic game audio for user-generated content required real-time generative capabilities.</li>
+            <li><strong>Obstacle:</strong> Existing MusicGen and AudioGen pipelines suffered from high latency, making them impractical for in-game audio rendering.</li>
+            <li><strong>Action:</strong> I developed and optimized text-to-audio and image-to-audio pipelines, successfully converting 50+ levels into prompts.</li>
+            <li><strong>Result:</strong> Optimized the generative pipeline latency to just 4 seconds per clip, making dynamic generation viable.</li>
+          </ul>
         </div>
+        <div class="item-keywords">Keywords: MusicGen, AudioGen, Generative AI, Optimization, Game Audio</div>
+      </div>
+
+      <div>
+        <div class="item-title">HallPals</div>
+        <div class="item-meta">Residence life operations platform</div>
+        <img class="item-figure" src="[PATH_TO_IMAGE.jpg]" alt="Screenshot of HallPals UI">
+        <div class="item-desc">
+          <strong>Personal Contribution:</strong> [State your role, e.g., Lead AI Integration Developer / Backend Architect]
+          <ul class="story-list">
+            <li><strong>Situation:</strong> Residence Assistants (RAs) needed a more efficient, centralized platform for duty operations and incident management.</li>
+            <li><strong>Obstacle:</strong> Incident reporting procedures were fragmented, leading to slow response times and inefficient shift handoffs.</li>
+            <li><strong>Action:</strong> Engineered an AI-assisted RA duty platform with role-based access control and contextual incident guidance.</li>
+            <li><strong>Result:</strong> Piloted the software with 10 RAs, achieving a ~30-minute efficiency gain per shift based on iterative user feedback.</li>
+          </ul>
+        </div>
+        <div class="item-keywords">Keywords: Web Development, Role-based Access, AI Assistance, User Feedback</div>
+      </div>
+
+      <div>
+        <div class="item-title">Drowsiness Detection (NumPy Neural Net)</div>
+        <div class="item-meta">Course project</div>
+        <img class="item-figure" src="[PATH_TO_IMAGE.jpg]" alt="Graph of neural network loss over epochs">
+        <div class="item-desc">
+          <ul class="story-list">
+            <li><strong>Context:</strong> I set out to build a multi-layer neural network completely from scratch using only NumPy for eye-state classification to detect drowsiness.</li>
+            <li><strong>What Didn't Go Well:</strong> Initially, I attempted to write the forward pass, backward pass, ReLU, and Softmax gradient descent all at once. Due to a hidden dimensionality bug in the backpropagation matrix multiplication, the model failed to learn and gradient descent diverged.</li>
+            <li><strong>What I Learned & Changed:</strong> This failure taught me the critical importance of modular testing in ML. I rewrote the codebase to unit-test each layer's forward and backward pass individually against known PyTorch outputs before integration. The final model successfully converged to 92% accuracy.</li>
+          </ul>
+        </div>
+        <div class="item-keywords">Keywords: NumPy, Neural Networks, Backpropagation, Gradient Descent, Debugging</div>
+      </div>
+
+      <div>
+        <div class="item-title">[Non-CS Project: e.g., Ethical Dimensions of Artificial Intelligence]</div>
+        <div class="item-meta">[Department, e.g., Philosophy/Theology] · [Year]</div>
+        <img class="item-figure" src="[PATH_TO_IMAGE.jpg]" alt="Photo of paper or presentation slide">
+        <div class="item-desc">
+          [Describe the non-CS artifact. Example: "For my upper-level philosophy seminar, I authored a 15-page research paper analyzing the ethical implications of open-weight MaaS APIs. I examined the societal impacts of multimodal vector search and data privacy through the lens of utilitarian ethics."]
+        </div>
+        <div class="item-keywords">Keywords: Ethics, Research Writing, Interdisciplinary, Privacy</div>
+      </div>
+
+      <div>
+        <div class="item-title">[Non-CS Project: e.g., Study Abroad in Rome / Service Learning]</div>
+        <div class="item-meta">[Organization/Program] · [Year]</div>
+        <img class="item-figure" src="[PATH_TO_IMAGE.jpg]" alt="Photo of experience or project artifact">
+        <div class="item-desc">
+          [Describe the second non-CS experience. Example: "Volunteered with a local non-profit to teach basic digital literacy to underserved communities. Translated technical concepts into accessible language, overcoming language barriers and differing educational backgrounds."]
+        </div>
+        <div class="item-keywords">Keywords: Communication, Service Learning, Digital Equity, Interpersonal Skills</div>
       </div>
 
       <div>
@@ -235,48 +324,11 @@
         <div class="item-meta">UROP · 2023
           <a class="item-link" href="https://doi.org/10.1109/TVCG.2024.3456345" target="_blank">IEEE →</a>
         </div>
+        <img class="item-figure" src="[PATH_TO_IMAGE.jpg]" alt="Sample of Ge'ez numerals">
         <div class="item-desc">
-          Implemented CNN, ResNet50, and InceptionV3 baselines for Ge'ez numeral
-          classification. Achieved 97.8% accuracy and 98% F1 on a 10,000-image dataset.
+          Implemented CNN, ResNet50, and InceptionV3 baselines for Ge'ez numeral classification. Through rigorous hyperparameter tuning, achieved 97.8% accuracy and 98% F1 on a 10,000-image dataset, aiding in the digitization of historical scripts.
         </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section>
-    <div class="section-label">Projects</div>
-    <div class="items">
-
-      <div>
-        <div class="item-title">SoulSpect</div>
-        <div class="item-meta">Privacy-first personal intelligence app</div>
-        <div class="item-desc">
-          Next.js app using open-weight MaaS APIs. Multimodal moment entry with
-          vector embeddings, ChromaDB, and RAG for semantic search across text, audio, and images.
-          Architected for on-device inference.
-        </div>
-      </div>
-
-      <div>
-        <div class="item-title">HallPals</div>
-        <div class="item-meta">Residence life operations platform</div>
-        <div class="item-desc">
-          AI-assisted RA duty platform with role-based access and incident guidance.
-          Piloted with 10 RAs; observed a ~30-minute efficiency gain per shift through
-          iterative user feedback.
-        </div>
-      </div>
-
-      <div>
-        <div class="item-title">Drowsiness Detection (NumPy Neural Net)</div>
-        <div class="item-meta">Course project</div>
-        <div class="item-desc">
-          Neural network built from scratch in NumPy — forward/backward pass, ReLU/Softmax,
-          gradient descent. Achieved 92% accuracy on eye-state classification.
-        </div>
+        <div class="item-keywords">Keywords: CNN, ResNet50, InceptionV3, Classification, Historical Scripts</div>
       </div>
 
     </div>
@@ -298,6 +350,9 @@
       <div>
         <div class="skill-group-label">Tools</div>
         <div class="skill-list">Linux, Git, SQL, Docker, GCP, Power BI</div>
+      </div>
+      <div>
+        <div class="skill-group-label">Professional Competencies</div> <div class="skill-list">Cross-functional Communication, Ethical Reasoning, Technical Writing, Agile Methodologies</div>
       </div>
       <div>
         <div class="skill-group-label">Education</div>
